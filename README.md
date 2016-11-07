@@ -1,7 +1,7 @@
 # CDPS
 
 
-   Python script to generate a virtual architecture with: LB (load balancer), C1 (client) and 1-5 Servers through two required elements: Image .qcow2 (named "Image.qcow2") and .xml virtual machine configuration document (named "template.xml"). Both have to be in the same repository the script.
+   Python script to generate a virtual architecture with: LB (load balancer), C1 (client) and 1-5 Servers through two required elements: Image .qcow2 (named "image.qcow2") and .xml virtual machine configuration document (named "template.xml"). Both have to be in the same repository the script.
   
   
   

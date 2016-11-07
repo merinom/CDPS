@@ -7,7 +7,7 @@
 
 ###############################################################
 # Para que el script funcione, debe tener en la misma carpeta #
-# los archivos cdps-vm-base-p3.qcow2 y plantilla-vm-p3.xml    #
+# los archivos image.qcow2 y template.xml                     #
 ###############################################################
 
 #obtenemos argumentos de la linea de comandos, en array sys.argv
@@ -24,12 +24,12 @@ import subprocess #importamos subprocesos
 #funcion para crear maquinas (imagen y xml)
 def crearMaquina (id):	
 	#crear la maquina
-	os.system("qemu-img create -f qcow2 -b cdps-vm-base-p3.qcow2 cdps-vm_"+id+".qcow2")
+	os.system("qemu-img create -f qcow2 -b image.qcow2 cdps-vm_"+id+".qcow2")
 	
 	#ARCHIVOS DE CONFIGURACION https://docs.python.org/2/library/xml.etree.elementtree.html
 	
 	#obtener info de la plantilla
-	xml = etree.parse("plantilla-vm-p3.xml")
+	xml = etree.parse("template.xml")
 	root = xml.getroot()
 	
 	#modificar etiquetas
